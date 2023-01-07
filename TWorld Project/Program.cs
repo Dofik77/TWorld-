@@ -7,6 +7,7 @@ namespace TWorld_Project
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            
             builder.Services.AddRazorPages();
 
             var app = builder.Build();
@@ -27,6 +28,13 @@ namespace TWorld_Project
             app.UseAuthorization();
 
             app.MapRazorPages();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(name: "default", pattern: "{controller=Test}/{action=Index}/{id?}");
+                //name - Name Route
+                //pattern - класс ( Test ) и метод ( action ) , к которому обратиться
+            });
 
             app.Run();
         }
