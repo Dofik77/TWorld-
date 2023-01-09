@@ -31,9 +31,9 @@ namespace TWorld_Project
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(name: "default", pattern: "{controller=Test}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(name: "default", pattern: "{controller}/{action}/{id?}");
                 //name - Name Route
-                //pattern - класс ( Test ) и метод ( action ) , к которому обратиться
+                //pattern - пїЅпїЅпїЅпїЅпїЅ ( Test ) пїЅ пїЅпїЅпїЅпїЅпїЅ ( action ) , пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             });
 
             app.Run();

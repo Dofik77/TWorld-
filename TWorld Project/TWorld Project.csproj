@@ -14,6 +14,10 @@
     <Folder Include="Views\Shared\" />
     <Folder Include="Domain\" />
     <Folder Include="Service\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Views\User\" />
+  </ItemGroup>
 </Project>
