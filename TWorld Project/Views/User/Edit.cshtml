@@ -1,11 +1,25 @@
 ﻿<div>"User/Edit"</div>
 
- First name:
-<input type="text" name="first_name" />
+ Имя :
+<input type="text" name="name" />
 <br />
-     Last name:
-<input type="text" name="last_name" />
+     E-mail:
+<input type="text" name="user_email" />
 <br />
-        E-mail:
-<input type="email" name="user_email" />
+        Мобильный телефон:
+<input type="text" name="phone_number" />
 <br />
+                        Город:
+<input type="text" name="city_name" />
+<br />
+                                О себе:
+<input type="text" name="about_user" />
+<br />
+
+<button onclick="redirect();">Сохранить и посмотреть</button>
+
+<script type="text/javascript">function redirect() {
+        window.location = "https://localhost:7206/User/Index";
+        //пытался через https:/Index - пересылал на главную страничку (https:/l..06/Idex)
+        //пытался через https:User/Index - открывал User/User/Index
+    }</script>
