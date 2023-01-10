@@ -1,30 +1,45 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using TWorld_Project.Model
+@model UserInfo
+@{
+    ViewData["Title"] = "Заполнение данных";
 }
-
 
 <div>"User/Edit"</div>
 
- Имя :
-<input type="text" name="name" />
-<br />
-     E-mail:
-<input type="text" name="user_email" />
-<br />
-        Мобильный телефон:
-<input type="text" name="phone_number" />
-<br />
-                        Город:
-<input type="text" name="city_name" />
-<br />
-                                О себе:
-<input type="text" name="about_user" />
-<br />
+<form method = "post" asp-controller = "UserController" asp-action = "Save">
+    
+    <!-- <label asp-for = "field" - не работает -->
 
-<button onclick="redirect();">Сохранить и посмотреть</button>
+    Имя
+    <input asp-for = "User_Name"/>
+    <span asp-validation-for="User_Name"></span>
 
-<script type="text/javascript">function redirect() {
-        window.location = "https://localhost:7206/User/Index";
-        //пытался через https:/Index - пересылал на главную страничку (https:/l..06/Idex)
-        //пытался через https:User/Index - открывал User/User/Index
-    }</script>
+    <br />
+
+    Почта
+    <input asp-for = "User_Email"/>
+    <span asp-validation-for="User_Email"></span>   
+
+    <br />
+
+    Номер телефона
+    <input asp-for = "Phone_Number"/>
+    <span asp-validation-for="Phone_Number"></span>
+
+    <br />
+
+    Город проживания 
+    <input asp-for = "User_City"/>
+    <span asp-validation-for="User_City"></span>
+
+    <br />
+
+     О себе
+    <input asp-for = "About_User"/>
+    <span asp-validation-for="About_User"></span> 
+
+    <br />
+
+    <button>Сохранить и посмотреть</button>
+
+</form>

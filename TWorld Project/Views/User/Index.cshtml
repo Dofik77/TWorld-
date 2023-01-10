@@ -1,17 +1,15 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using TWorld_Project.Model
+@model UserInfo
+@{
+    ViewData["Title"] = "Заполнение данных";
 }
 
 
 <div>"User/Index"</div>
 
-Имя: Стас<br />
+<div>@Model.User_Name</div>
+<br/>
+<div>@Model.About_User</div>
 
-E-mail: khorochavcev@mail.ru<br />
 
-Мобильный телефон: 8885553535<br />
-
-Город: Ижевск <br />
-
-О себе: Designer<br />
 
