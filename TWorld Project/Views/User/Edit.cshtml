@@ -1,44 +1,26 @@
 ﻿@using TWorld_Project.Model
 @model UserInfo
 @{
-    ViewData["Title"] = "Заполнение данных";
+
 }
+
 
 <div>"User/Edit"</div>
 
-<form method = "post" asp-controller = "User" asp-action = "Save">
+<form method = "post" action= "Save">
     
     <!-- <label asp-for = "field" - не работает -->
 
-    Имя
-    <input asp-for = "User_Name"/>
-    <span asp-validation-for="User_Name"></span>
+    <p>
+        <label asp-for="UserInfo.User_Name">Имя</label><br />
+        <input type="text" value = "@Model.User_Name" />
+    </p>
 
-    <br />
+     <p>
+        <label asp-for="UserInfo.User_Name">О себе</label><br />
+        <input type = "text" value = "@Model.About_User" />
+    </p>
 
-    Почта
-    <input asp-for = "User_Email"/>
-    <span asp-validation-for="User_Email"></span>   
-
-    <br />
-
-    Номер телефона
-    <input asp-for = "Phone_Number"/>
-    <span asp-validation-for="Phone_Number"></span>
-
-    <br />
-
-    Город проживания 
-    <input asp-for = "User_City"/>
-    <span asp-validation-for="User_City"></span>
-
-    <br />
-
-     О себе
-    <input asp-for = "About_User"/>
-    <span asp-validation-for="About_User"></span> 
-
-    <br />
 
     <button>Сохранить и посмотреть</button>
 
