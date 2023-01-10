@@ -14,6 +14,11 @@ namespace TWorld_Project.Controllers
 		{
 			return View();
 		}
+
+		public void Save()
+		{
+			 
+		}
 	}
 }
 
