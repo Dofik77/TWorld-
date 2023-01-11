@@ -18,10 +18,10 @@ namespace TWorld_Project.Controllers
 			return View();
 		}
 
-		[HttpPost("SaveChange")]
-		public IActionResult Save(UserInfo model)
+		[HttpPost]
+		public IActionResult Save([FromForm] Product model, int a)
 		{
-			return RedirectToAction("Index", model.User_Name);
+			return RedirectToAction("Index", model);
         }
     }
 }

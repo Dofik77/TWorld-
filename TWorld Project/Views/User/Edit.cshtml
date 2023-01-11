@@ -1,6 +1,4 @@
-﻿@using TWorld_Project.Model
-@model UserInfo
-
+﻿@model TWorld_Project.Model.Product
 @{
 
 }
@@ -8,15 +6,26 @@
 
 <div>"User/Edit"</div>
 
-<h1>@Model.User_Name</h1>
 
-<form method="post" action="/SaveChange" role="form">
+<form method="post" action="Save" asp-antiforgery="true">
 
-    
+    <div>
+        <div>
+            <label asp-for="Name"></label>
+            <input type="text" asp-for="Name" />
+        </div>
+        <div>
+            <label asp-for="Price"></label>
+            <input asp-for="Price" />
+        </div>
 
-    <!-- <label asp-for = "field" - не работает -->
-    <label asp-for="Name"></label>
-    <input asp-for="User_Name" type="text" />
-    <input type="submit">
+        <div>
+            <input asp-for = "a"/>
+        </div>
+      
+        <div>
+            <input type="submit" value="Save" />
+        </div>
+    </div>
 
 </form>
