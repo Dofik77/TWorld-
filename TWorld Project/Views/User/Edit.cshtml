@@ -1,5 +1,6 @@
 ﻿@using TWorld_Project.Model
 @model UserInfo
+
 @{
 
 }
@@ -7,21 +8,15 @@
 
 <div>"User/Edit"</div>
 
-<form method = "post" action= "Save">
+<h1>@Model.User_Name</h1>
+
+<form method="post" action="/SaveChange" role="form">
+
     
+
     <!-- <label asp-for = "field" - не работает -->
-
-    <p>
-        <label asp-for="UserInfo.User_Name">Имя</label><br />
-        <input type="text" value = "@Model.User_Name" />
-    </p>
-
-     <p>
-        <label asp-for="UserInfo.User_Name">О себе</label><br />
-        <input type = "text" value = "@Model.About_User" />
-    </p>
-
-
-    <button>Сохранить и посмотреть</button>
+    <label asp-for="Name"></label>
+    <input asp-for="User_Name" type="text" />
+    <input type="submit">
 
 </form>

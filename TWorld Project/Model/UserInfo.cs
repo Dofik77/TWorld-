@@ -4,6 +4,11 @@ namespace TWorld_Project.Model
 {
     public class UserInfo
     {
+        public UserInfo()
+        {
+            User_Name = "stas";
+        }
+
         //Display don't work on view
       
         public string User_Name { get; set; }
