@@ -1,31 +1,19 @@
-﻿@model TWorld_Project.Model.Product
-@{
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model TWorld_Project.Model.UserInfo
 
-}
 
 
 <div>"User/Edit"</div>
 
 
-<form method="post" action="Save" asp-antiforgery="true">
+<form method="post" asp-action="Save">
 
-    <div>
-        <div>
-            <label asp-for="Name"></label>
-            <input type="text" asp-for="Name" />
-        </div>
-        <div>
-            <label asp-for="Price"></label>
-            <input asp-for="Price" />
-        </div>
+    Имя
+    <input asp-for="User_Name" />
+    <span asp-validation-for="User_Name"></span>
 
-        <div>
-            <input asp-for = "a"/>
-        </div>
-      
-        <div>
-            <input type="submit" value="Save" />
-        </div>
-    </div>
+    <br />
+
+    <button>Сохранить изменения</button>
 
 </form>
