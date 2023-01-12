@@ -2,9 +2,35 @@
 @using TWorld_Project.Model
 @model UserInfo
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Личная информация</title>
+</head>
+<body>
+  <h1>Ваши данные</h1>
+    <fieldset>
+      <legend>Информация о пользователе</legend>
+      <p><label>Имя</label>
+        <h1>@Model.UserName</h1>
+      </p>
 
-<form method="get" >
+      <p><label>Ваша почта</label>
+         <h1>@Model.AboutUser</h1>
+      </p>
 
-   
+      <p><label>Ваш номер телефона</label>
+         <h1>@Model.PhoneNumber</h1>
+      </p>
 
-</form>
+      <p><label>Ваш город проживания</label>
+         <h1>@Model.UserCity</h1>
+      </p>
+
+      <p><label>О себе</label>
+         <h1>@Model.AboutUser</h1>
+      </p>
+    </fieldset>
+</body>
+</html>

@@ -9,10 +9,35 @@
 <form method="post" asp-action="Save">
 
     Имя
-    <input asp-for="User_Name" />
-    <span asp-validation-for="User_Name"></span>
+    <input asp-for="UserName" />
+    <span asp-validation-for="UserName"></span>
 
     <br />
+
+    Ваш почтовый ящик
+    <input asp-for="UserMail" />
+    <span asp-validation-for="UserMail"></span>
+
+    <br />
+
+    Ваш номер телефона
+    <input asp-for="PhoneNumber" />
+    <span asp-validation-for="PhoneNumber"></span>
+
+    <br />
+
+    Ваш город проживания
+    <input asp-for="UserCity" />
+    <span asp-validation-for="UserCity"></span>
+
+    <br />
+
+    Расскажите о себе 
+    <input asp-for="AboutUser" />
+    <span asp-validation-for="AboutUser"></span>
+
+    <br />
+
 
     <button>Сохранить изменения</button>
 

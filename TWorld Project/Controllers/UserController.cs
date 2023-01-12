@@ -8,9 +8,8 @@ namespace TWorld_Project.Controllers
 	public class UserController : Controller
 	{
 		[HttpGet]
-		public IActionResult Index(UserInfo ?model)
+		public IActionResult Index()
 		{
-			ViewData["User_Name"] = model.User_Name;
 			return View();
 		}
 
@@ -22,8 +21,7 @@ namespace TWorld_Project.Controllers
 		[HttpPost]
 		public IActionResult Save(UserInfo model)
 		{
-			Index(model);
-			return RedirectToAction("Index", model);
+			return View("Index", model);
         }
     }
 }
