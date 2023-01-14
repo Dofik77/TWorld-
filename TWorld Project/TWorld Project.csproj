@@ -8,12 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Areas\Admin\Views\" />
     <Folder Include="Model\ViewComponent\" />
-    <Folder Include="Views\Shared\" />
-    <Folder Include="Domain\" />
-    <Folder Include="Service\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
 
