@@ -3,3 +3,8 @@
 /TWorld Project/.vs
 /TWorld Project/bin
 /TWorld Project/.idea
+*.dll
+*.dll
+/backend/TWorl.WebApi/.idea
+/backend/TWorl.WebApi/bin
+/backend/TWorl.WebApi/obj
